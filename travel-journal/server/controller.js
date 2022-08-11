@@ -29,7 +29,8 @@ module.exports = {
                 city_id serial primary key,
                 name varchar,
                 rating integer,
-                country_id integer
+                country_id integer 
+                FOREIGN KEY REFERENCES countries(country_id)
                 );
 
             INSERT INTO cities (name, rating, country_id) values 
